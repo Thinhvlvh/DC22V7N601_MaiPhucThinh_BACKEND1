@@ -12,6 +12,7 @@ class ContactService {
             address: payload.address,
             phone: payload.phone,
             favorite: payload.favorite,
+            hobbies: Array.isArray(payload.hobbies) ? payload.hobbies : [],
         };
         // Remove undefined fields
         Object.keys(contact).forEach((key) => contact[key] === undefined && delete contact[key]);
